@@ -5,6 +5,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login --region us-west-2
+      - echo Pulling maven image...
+      - docker pull maven:3.3-jdk-8
   build:
     commands:
       - echo Build started on `date`
